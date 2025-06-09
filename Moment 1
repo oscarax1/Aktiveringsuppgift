@@ -1,0 +1,29 @@
+class Produkt
+{
+    public string Namn { get; set; }
+    public double Pris { get; set; }
+
+    public Produkt(string namn, double pris)
+    {
+        Namn = namn;
+        Pris = pris;
+    }
+
+    public void VisaInfo()
+    {
+        Console.WriteLine($"Produkt: {Namn}, Pris: {Pris} kr");
+    }
+}
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        Produkt produkt1 = new Produkt("bok", 199.0);
+        Produkt produkt2 = new Produkt("Tangentbord", 399.0);
+
+        produkt1.VisaInfo();
+        produkt2.VisaInfo();
+
+    }
+}
